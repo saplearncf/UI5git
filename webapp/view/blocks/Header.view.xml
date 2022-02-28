@@ -1,0 +1,33 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:forms="sap.ui.layout.form" xmlns:smartForm="sap.ui.comp.smartform"
+	xmlns:smartField="sap.ui.comp.smartfield" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.m">
+	<smartForm:SmartForm id="smartForm" app:defaultCheckBoxDisplayBehaviour="OnOff" app:defaultDropDownDisplayBehaviour="idAndDescription"
+		editTogglable="false" title="{Name}">
+		<smartForm:Group>
+			<smartForm:GroupElement label="{i18n>HEADER_DESCRIPTION}">
+				<smartField:SmartField textLabel="{Name}" value="{Name}"/>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement label="{i18n>HEADER_WORK_CENTER}">
+				<smartField:SmartField value="{Category}">
+					<smartField:configuration>
+						<smartField:Configuration controlType="dropDownList" displayBehaviour="descriptionAndId"/>
+					</smartField:configuration>
+				</smartField:SmartField>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement label="{i18n>HEADER_START_DATE_TIME}">
+				<smartField:SmartField value="{Price}"/>
+			</smartForm:GroupElement>
+		</smartForm:Group>
+		<smartForm:Group>
+			<smartForm:GroupElement label="{i18n>HEADER_TECH_OBJECT}">
+				<smartField:SmartField value="{Price}"/>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement label="{i18n>HEADER_WBS_ELEMENT}">
+				<smartField:SmartField value="{Price}"/>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement label="{i18n>HEADER_END_DATE_TIME}">
+				<smartField:SmartField value="{Price}"/>
+			</smartForm:GroupElement>
+		</smartForm:Group>
+	</smartForm:SmartForm>
+</mvc:View>

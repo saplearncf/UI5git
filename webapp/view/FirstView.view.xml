@@ -1,0 +1,18 @@
+<mvc:View controllerName="com.sap.firstappFirstApp.controller.FirstView" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Button text="Next" press="goToMaterialDetail"/>
+					<SearchField id="search" liveChange="onSearch" value="{appStateModel>/searchId}"/>
+					<List id="ShortProductList" headerText="Products" items="{ path: '/ProductCollection', sorter: { path: 'Name' } }">
+						<items>
+							<StandardListItem type="Active" press="goToMaterialDetail" title="{Name}"/>
+						</items>
+					</List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
